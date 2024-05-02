@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Button from "./Button";
@@ -88,6 +86,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({ application }) => {
           <Button
             variant="borderless"
             href={applicationUrl}
+            target="_blank" // Added target attribute to open link in new tab
+            rel="noopener noreferrer" // Added rel attribute for security reasons
             className="px-4 rounded-3xl lg:rounded-full md:px-7 dark:border-white"
           >
             <LinkIcon />
